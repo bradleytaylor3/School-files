@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graduation Efficiency Planner</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<p><input type="text" id="major-search" placeholder="Search for your major here"><button type="submit" id="search-major">Search</button>
+    <button type="button" id="clear-search">Clear search</button></p>
+    <p><select id="course-dropdown">
+        <option selected="selected">Select your major below</option>
+    </select></p>
+    <p><button id="planner-redirect">Generate potential plan</button></p>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'core-courses')">Core Courses</button>
+        <button class="tablinks" onclick="openTab(event, 'liberal-studies')">Liberal Studies</button>
+        <button class="tablinks" onclick="openTab(event, 'rigr')">Racial Issues Graduation Requirement</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-1')">Goal 1</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-2')">Goal 2</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-3')">Goal 3</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-4')">Goal 4</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-5')">Goal 5</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-6')">Goal 6</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-7')">Goal 7</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-8')">Goal 8</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-9')">Goal 9</button>
+        <button class="tablinks" onclick="openTab(event, 'goal-10')">Goal 10</button>
+        <button class="tablinks" onclick="openTab(event, 'electives')">Electives</button>
+        <button id="breakdown-tab" class="tablinks" onclick="openTab(event, 'breakdown')">Breakdown</button>
+        <button id="required-course-tab" class="tablinks" onclick="openTab(event, 'required-courses')">Required courses</button>
+        <button class="tablinks" onclick="openTab(event, 'csv-ingestion')">CSV Ingestion</button>
+    </div>
+    <div id="core-courses" class="tabcontent">
+        <h3><u>Core Courses</u></h3>
+        <table id="core-courses-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="liberal-studies" class="tabcontent">
+        <h3><u>Liberal Studies</u></h3>
+        <table id="liberal-studies-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="rigr" class="tabcontent">
+        <h3><u>Racial Issues Graduation Requirement</u></h3>
+        <p>All new or readmitted undergraduate students admitted fall 2016 or later must complete an approved learning
+            experience (at least 3 credits) with a significant focus on race and racism to graduate with a bachelor's
+            degree from the university.  Upon review, an approved prior learning, independent study, theory seminar or
+            transfer course from other accredited institutions may also be used to meet this graduation requirement.</p>
+        <table id="rigr-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-1" class="tabcontent">
+        <h3><u>Goal 1: Communication</u></h3>
+        <p>To develop writers and speakers who use the English language effectively and who read, write, speak and
+            listen critically. As a base, all students should complete introductory communication requirements early
+            in their collegiate studies. Writing competency is an ongoing process to be reinforced through
+            writing-intensive courses and writing across the curriculum. Speaking and listening skills need
+            reinforcement through multiple opportunities for interpersonal communication, public speaking,
+            and discussion.</p>
+        <p>One course from here</p>
+        <table id="goal-1-1-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+        <p>One course from here</p>
+        <table id="goal-1-2-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+        <p>Three or more credits from here</p>
+        <table id="goal-1-3-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-2" class="tabcontent">
+        <h3><u>Goal 2: Critical Thinking</u></h3>
+        <p>To develop thinkers who are able to unify factual, creative, rational, and value-sensitive modes of thought.
+            Critical thinking will be taught and used throughout the general education curriculum in order to develop
+            students' awareness of their own thinking and problem-solving procedures. To integrate new skills into
+            their customary ways of thinking, students must be actively engaged in practicing thinking skills and
+            applying them to open-ended problems.</p>
+    </div>
+    <div id="goal-3" class="tabcontent">
+        <h3><u>Goal 3: Natural Sciences</u></h3>
+        <p>To improve students' understanding of natural science principles and of the methods of scientific inquiry,
+            i.e., the ways in which scientists investigate natural science phenomena. As a basis for lifelong learning,
+            students need to know the vocabulary of science and to realize that while a set of principles has been
+            developed through the work of previous scientists, ongoing scientific inquiry and new knowledge will bring
+            changes in some of the ways scientists view the world. By studying the problems that engage today's
+            scientists, students learn to appreciate the importance of science in their lives and to understand the
+            value of a scientific perspective. Students should be encouraged to study both the biological and physical
+            sciences.</p>
+        <p>Seven or more credits including a laboratory</p>
+        <table id="goal-3-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+        <p>Labs match by course + L. BIOL-221 & BIOL-221L are a course and lab combination</p>
+        <table id="goal-3-lab-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-4" class="tabcontent">
+        <h3><u>Goal 4: Mathmatics or Logical Reasoning</u></h3>
+        <p>To increase students' knowledge about mathematical and logical modes of thinking. This will enable students
+            to appreciate the breadth of applications of mathematics, evaluate arguments, and detect fallacious
+            reasoning. Students will learn to apply mathematics, logic, and/or statistics to help them make decisions
+            in their lives and careers. Minnesota's public higher education systems have agreed that developmental
+            mathematics includes the first three years of a high school mathematics sequence through intermediate algebra.</p>
+        <p>Three or more credits</p>
+        <p>This requirement is waived for students placing above the college algebra level on university's higher level math assessment</p>
+        <table id="goal-4-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-5" class="tabcontent">
+        <h3><u>Goal 5: History and the Social and Behavioral Sciences</u></h3>
+        <p>To increase students' knowledge of how historians and social and behavioral scientists discover, describe,
+            and explain the behaviors and interactions among individuals, groups, institutions, events, and ideas.
+            Such knowledge will better equip students to understand themselves and the roles they play in addressing
+            the issues facing humanity.</p>
+        <p>Six or more credits from two or more disciplines</p>
+        <table id="goal-5-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-6" class="tabcontent">
+        <h3><u>Goal 6: The Humanities and the Fine Arts</u></h3>
+        <p>To expand students' knowledge of the human condition and human cultures, especially in relation to behavior,
+            ideas, and values expressed in works of human imagination and thought. Through study in disciplines such as
+            literature, philosophy, and the fine arts, students will engage in critical analysis, form aesthetic judgments,
+            and develop an appreciation of the arts and humanities as fundamental to the health and survival of any
+            society. Students should have experiences in both the arts and humanities.</p>
+        <p>Six or more credits from two or more disciplines</p>
+        <table id="goal-6-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-7" class="tabcontent">
+        <h3><u>Goal 7: Human Diversity</u></h3>
+        <p>To increase students' understanding of individual and group differences (e.g. race, gender, class) and their
+            knowledge of the traditions and values of various groups in the United States. Students should be able to
+            evaluate the United States' historical and contemporary responses to group differences.</p>
+        <p>Three or more credits</p>
+        <table id="goal-7-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-8" class="tabcontent">
+        <h3><u>Goal 8: Global Perspective</u></h3>
+        <p>To increase students' understanding of the growing interdependence of nations and peoples and develop their
+            ability to apply a comparative perspective to cross-cultural social, economic and political experiences.</p>
+        <p>Three or more credits</p>
+        <table id="goal-8-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-9" class="tabcontent">
+        <h3><u>Goal 9: Ethical and Civic Responsibility</u></h3>
+        <p>To develop students' capacity to identify, discuss, and reflect upon the ethical dimensions of political,
+            social, and personal life and to understand the ways in which they can exercise responsible and productive
+            citizenship. While there are diverse views of social justice or the common good in a pluralistic society,
+            students should learn that responsible citizenship requires them to develop skills to understand their own
+            and others' positions, be part of the free exchange of ideas, and function as public-minded citizens.</p>
+        <p>Three or more credits</p>
+        <table id="goal-9-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-10" class="tabcontent">
+        <h3><u>Goal 10: People and the Environment</u></h3>
+        <p>To improve students' understanding of today's complex environmental challenges. Students will examine the
+            inter-relatedness of human society and the natural environment. Knowledge of both bio-physical principles
+            and socio-cultural systems is the foundation for integrative and critical thinking about environmental issues.</p>
+        <p>Three or more credits</p>
+        <table id="goal-10-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="electives" class="tabcontent">
+        <h3><u>Electives</u></h3>
+        <table id="electives-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="breakdown" class="tabcontent">
+        <h2 class="major-name"></h2>
+        <div id="breakdown-core-courses">
+            <h3><u>Core Courses</u></h3>
+            <p>Credits: <span id="core-courses-credits"></span></p>
+            <table id="breakdown-core-courses-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-liberal-studies">
+            <h3><u>Liberal Studies</u></h3>
+            <p>Credits: <span id="liberal-studies-credits"></span> of 8</p>
+            <table id="breakdown-liberal-studies-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-rigr">
+            <h3><u>Racial Issues Graduation Requirement</u></h3>
+            <p>Credits: <span id="rigr-credits"></span> of 3</p>
+            <table id="breakdown-rigr-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-1">
+            <h3><u>Goal 1: Communication</u></h3>
+            <p>Credits: <span id="goal-1-credits"></span> of 9</p>
+            <table id="breakdown-goal-1-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-2">
+            <h3><u>Goal 2: Critical Thinking</u></h3>
+            <p>To develop thinkers who are able to unify factual, creative, rational, and value-sensitive modes of thought.
+                Critical thinking will be taught and used throughout the general education curriculum in order to develop
+                students' awareness of their own thinking and problem-solving procedures. To integrate new skills into
+                their customary ways of thinking, students must be actively engaged in practicing thinking skills and
+                applying them to open-ended problems.</p>
+        </div>
+        <div id="breakdown-goal-3">
+            <h3><u>Goal 3: Natural Sciences</u></h3>
+            <p>Credits: <span id="goal-3-credits"></span> of 7</p>
+            <table id="breakdown-goal-3-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-4">
+            <h3><u>Goal 4: Mathmatics or Logical Reasoning</u></h3>
+            <p>Credits: <span id="goal-4-credits"></span> of 3</p>
+            <table id="breakdown-goal-4-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-5">
+            <h3><u>Goal 5: History and the Social and Behavioral Sciences</u></h3>
+            <p>Credits: <span id="goal-5-credits"></span> of 6</p>
+            <table id="breakdown-goal-5-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-6">
+            <h3><u>Goal 6: The Humanities and the Fine Arts</u></h3>
+            <p>Credits: <span id="goal-6-credits"></span> of 6</p>
+            <p>This class</p>
+            <table id="breakdown-goal-6-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+            <p>Pick any class</p>
+            <table id="breakdown-goal-6-1-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-7">
+            <h3><u>Goal 7: Human Diversity</u></h3>
+            <p>Credits: <span id="goal-7-credits"></span> of 3</p>
+            <table id="breakdown-goal-7-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-8">
+            <h3><u>Goal 8: Global Perspective</u></h3>
+            <p>Credits: <span id="goal-8-credits"></span> of 3</p>
+            <table id="breakdown-goal-8-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-9">
+            <h3><u>Goal 9: Ethical and Civic Responsibility</u></h3>
+            <p>Credits: <span id="goal-9-credits"></span> of 3</p>
+            <table id="breakdown-goal-9-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-goal-10">
+            <h3><u>Goal 10: People and the Environment</u></h3>
+            <p>Credits: <span id="goal-10-credits"></span> of 3</p>
+            <table id="breakdown-goal-10-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+        <div id="breakdown-electives">
+            <h3><u>Electives</u></h3>
+            <p>Fill as needed</p>
+            <table id="breakdown-electives-table">
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Credits</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="required-courses" class="tabcontent">
+        <h2 class="major-name"></h2>
+        <p><button type="button" id="required-courses-download">Download class list</button></p>
+        <form id="csv-download" action="CSVGenerator.php" method="post">
+        </form>
+        <p>Credits: <span id="recomended-courses-credits"></span></p>
+        <table id="recomended-courses-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="csv-ingestion" class="tabcontent">
+        <h2>Upload completed course files</h2>
+        <table width="600">
+            <form action="CSVIngestion.php" method="post" enctype="multipart/form-data">
+
+            <tr>
+                <td width="20%">Select file</td>
+                <td width="80%"><input type="file" name="file" id="file" /></td>
+            </tr>
+
+            <tr>
+                <td>Submit</td>
+                <td><button id="upload-csv" type="button" name="submit">Upload file</button></td>
+            </tr>
+            </form>
+        </table>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

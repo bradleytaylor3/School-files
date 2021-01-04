@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Graduation Efficiency Planner</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'breakdown')">Breakdown</button>
+    <button class="tablinks" onclick="openTab(event, 'required-courses')">Required courses</button>
+</div>
+<div id="breakdown" class="tabcontent">
+    <h2 class="major-name"></h2>
+    <div id="core-courses">
+        <h3><u>Core Courses</u></h3>
+        <p>Credits: <span id="core-courses-credits"></span></p>
+        <table id="core-courses-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="liberal-studies">
+        <h3><u>Liberal Studies</u></h3>
+        <p>Credits: <span id="liberal-studies-credits"></span> of 8</p>
+        <table id="liberal-studies-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="rigr">
+        <h3><u>Racial Issues Graduation Requirement</u></h3>
+        <p>Credits: <span id="rigr-credits"></span> of 3</p>
+        <table id="rigr-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-1">
+        <h3><u>Goal 1: Communication</u></h3>
+        <p>Credits: <span id="goal-1-credits"></span> of 9</p>
+        <table id="goal-1-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-2">
+        <h3><u>Goal 2: Critical Thinking</u></h3>
+        <p>To develop thinkers who are able to unify factual, creative, rational, and value-sensitive modes of thought.
+            Critical thinking will be taught and used throughout the general education curriculum in order to develop
+            students' awareness of their own thinking and problem-solving procedures. To integrate new skills into
+            their customary ways of thinking, students must be actively engaged in practicing thinking skills and
+            applying them to open-ended problems.</p>
+    </div>
+    <div id="goal-3">
+        <h3><u>Goal 3: Natural Sciences</u></h3>
+        <p>Credits: <span id="goal-3-credits"></span> of 7</p>
+        <table id="goal-3-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-4">
+        <h3><u>Goal 4: Mathmatics or Logical Reasoning</u></h3>
+        <p>Credits: <span id="goal-4-credits"></span> of 3</p>
+        <table id="goal-4-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-5">
+        <h3><u>Goal 5: History and the Social and Behavioral Sciences</u></h3>
+        <p>Credits: <span id="goal-5-credits"></span> of 6</p>
+        <table id="goal-5-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-6">
+        <h3><u>Goal 6: The Humanities and the Fine Arts</u></h3>
+        <p>Credits: <span id="goal-6-credits"></span> of 6</p>
+        <p>This class</p>
+        <table id="goal-6-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+        <p>Pick any class</p>
+        <table id="goal-6-1-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-7">
+        <h3><u>Goal 7: Human Diversity</u></h3>
+        <p>Credits: <span id="goal-7-credits"></span> of 3</p>
+        <table id="goal-7-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-8">
+        <h3><u>Goal 8: Global Perspective</u></h3>
+        <p>Credits: <span id="goal-8-credits"></span> of 3</p>
+        <table id="goal-8-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-9">
+        <h3><u>Goal 9: Ethical and Civic Responsibility</u></h3>
+        <p>Credits: <span id="goal-9-credits"></span> of 3</p>
+        <table id="goal-9-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="goal-10">
+        <h3><u>Goal 10: People and the Environment</u></h3>
+        <p>Credits: <span id="goal-10-credits"></span> of 3</p>
+        <table id="goal-10-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+    <div id="electives">
+        <h3><u>Electives</u></h3>
+        <p>Fill as needed</p>
+        <table id="electives-table">
+            <tr>
+                <th>Course</th>
+                <th>Description</th>
+                <th>Credits</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="required-courses" class="tabcontent">
+    <h2 class="major-name"></h2>
+    <p><button type="button" id="required-courses-download">Download class list</button></p>
+    <form id="csv-download" action="CSVGenerator.php" method="post">
+    </form>
+    <p>Credits: <span id="recomended-courses-credits"></span></p>
+    <table id="recomended-courses-table">
+        <tr>
+            <th>Course</th>
+            <th>Description</th>
+            <th>Credits</th>
+        </tr>
+    </table>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="planner.js"></script>
+</body>
+</html>
